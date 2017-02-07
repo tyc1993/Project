@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65740B9F-5196-4D81-B259-777E067440FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FamilyFinance</RootNamespace>
+    <AssemblyName>FamilyFinance</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountBook.Designer.cs">
+      <DependentUpon>AccountBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assets.Designer.cs">
+      <DependentUpon>Assets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartBudget.Designer.cs">
+      <DependentUpon>ChartBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartFamily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartFamily.Designer.cs">
+      <DependentUpon>ChartFamily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartIn.Designer.cs">
+      <DependentUpon>ChartIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartOut.Designer.cs">
+      <DependentUpon>ChartOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Family_DataDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Family_DataDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Family_DataDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Family_DataDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Family_DataDataSet3.cs">
+      <DependentUpon>Family_DataDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Family_DataDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Family_DataDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Family_DataDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Family_DataDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Family_DataDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Family_DataDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Finance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance.Designer.cs">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note.Designer.cs">
+      <DependentUpon>Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBudget.Designer.cs">
+      <DependentUpon>UpdateBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateIn.Designer.cs">
+      <DependentUpon>UpdateIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Problem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Problem.Designer.cs">
+      <DependentUpon>Problem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateFamily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateFamily.Designer.cs">
+      <DependentUpon>UpdateFamily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOut.Designer.cs">
+      <DependentUpon>UpdateOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePic.Designer.cs">
+      <DependentUpon>UpdatePic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePwd.Designer.cs">
+      <DependentUpon>UpdatePwd.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountBook.resx">
+      <DependentUpon>AccountBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets.resx">
+      <DependentUpon>Assets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartBudget.resx">
+      <DependentUpon>ChartBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartFamily.resx">
+      <DependentUpon>ChartFamily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartIn.resx">
+      <DependentUpon>ChartIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartOut.resx">
+      <DependentUpon>ChartOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance.resx">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Note.resx">
+      <DependentUpon>Note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Problem.resx">
+      <DependentUpon>Problem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="UpdateBudget.resx">
+      <DependentUpon>UpdateBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateFamily.resx">
+      <DependentUpon>UpdateFamily.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateIn.resx">
+      <DependentUpon>UpdateIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateOut.resx">
+      <DependentUpon>UpdateOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePic.resx">
+      <DependentUpon>UpdatePic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePwd.resx">
+      <DependentUpon>UpdatePwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Family_DataDataSet1.xsc">
+      <DependentUpon>Family_DataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Family_DataDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Family_DataDataSet1.xss">
+      <DependentUpon>Family_DataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet2.xsc">
+      <DependentUpon>Family_DataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Family_DataDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Family_DataDataSet2.xss">
+      <DependentUpon>Family_DataDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet3.xsc">
+      <DependentUpon>Family_DataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Family_DataDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Family_DataDataSet3.xss">
+      <DependentUpon>Family_DataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet31.xsc">
+      <DependentUpon>Family_DataDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Family_DataDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Family_DataDataSet31.xss">
+      <DependentUpon>Family_DataDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet4.xsc">
+      <DependentUpon>Family_DataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Family_DataDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Family_DataDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Family_DataDataSet4.xss">
+      <DependentUpon>Family_DataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\20121030134706.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\201411817542153413.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\calc.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\notepad.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\删除2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\添加2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\删除%28小%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\删除%28小%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\添加2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\SearchButton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\添加%28小%291.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
